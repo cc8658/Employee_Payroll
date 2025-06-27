@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Payroll Form</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../jquery/form.js"></script>
+<body>
+<!-- Header -->
+<div class="employeeHeader">
+    <a href="EmployeeDashboard.html" style="text-decoration: none; color: inherit;">
+        <header class="headerline">
+            <div id="logo">
+                <img src="https://img.icons8.com/ios-filled/50/82A70C/employee-card.png" class="logo-icon" alt="logo"/>
+            </div>
+            <div class="title-text">
+                <span style="color:greenyellow">EMPLOYEE</span><br>
+                <span class="title-sub">PAYROLL</span>
+            </div>
+        </header>
+    </a>
+</div>
+
+<!-- Form Container -->
+<div class="container">
+    <h2 id="form-header">Employee Payroll Form</h2>
+    <form id="payroll">
+
+        <!-- Name -->
+        <div class="form-group">
+            <label for="name" class="label-left"><span class="label-text">Name</span></label>
+            <input type="text" id="name" name="name" placeholder="Enter name">
+            <span class="error-message"></span>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="form-group">
+            <label class="label-left"><span class="label-text">Profile Image</span></label>
+            <div class="form-options">
+                <input type="radio" id="img1" name="profile" value="img1">
+                <label for="img1"><img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Profile 1"></label>
+
+                <input type="radio" id="img2" name="profile" value="img2">
+                <label for="img2"><img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Profile 2"></label>
+
+                <input type="radio" id="img3" name="profile" value="img3">
+                <label for="img3"><img src="https://randomuser.me/api/portraits/men/97.jpg" alt="Profile 3"></label>
+
+                <input type="radio" id="img4" name="profile" value="img4">
+                <label for="img4"><img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Profile 4"></label>
+            </div>
+            <span class="error-message"></span>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+            <label class="label-left"><span class="label-text">Gender</span></label>
+            <div class="form-options">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <span class="error-message"></span>
+        </div>
+
+        <!-- Department -->
+        <div class="form-group">
+            <label class="label-left"><span class="label-text">Department</span></label>
+            <div class="form-options">
+                <input type="checkbox" id="deptHR" name="department" value="HR">
+                <label for="deptHR">HR</label>
+
+                <input type="checkbox" id="deptSales" name="department" value="Sales">
+                <label for="deptSales">Sales</label>
+
+                <input type="checkbox" id="deptFinance" name="department" value="Finance">
+                <label for="deptFinance">Finance</label>
+
+                <input type="checkbox" id="deptEngineer" name="department" value="Engineer">
+                <label for="deptEngineer">Engineer</label>
+
+                <input type="checkbox" id="deptOthers" name="department" value="Others">
+                <label for="deptOthers">Others</label>
+            </div>
+            <span class="error-message"></span>
+        </div>
+
+        <!-- Salary -->
+        <div class="form-group">
+            <label for="salary" class="label-left"><span class="label-text">Salary</span></label>
+            <select id="salary" name="salary">
+
+              <option value="">Select Salary</option>
+              <option value="10000">10,000</option>
+              <option value="30000">30,000</option>
+              <option value="50000">50,000</option>
+              <option value="70000">70,000</option>
+            </select>
+            <span class="error-message"></span>
+        </div>
+
+        <!-- Start Date -->
+        <div class="form-group">
+            <label class="label-left"><span class="label-text">Start Date</span></label>
+            <div class="form-options">
+                <select id="day" name="day">
+                  <script>
+                    const daySelect = document.getElementById("day");
+                    const defaultOption = document.createElement("option");
+                    defaultOption.text = "Day";
+                    defaultOption.value = "";
+                    daySelect.add(defaultOption);
+                    for (let i = 1; i <= 31; i++) {
+                      const option = document.createElement("option");
+                      option.value = i;
+                      option.text = i;
+                      daySelect.add(option);
+                    }
+                  </script>
+                </select>
+                <select name="month">
+                  <option>Month</option>
+                  <option>Jan</option>
+                  <option>Feb</option>
+                  <option>Mar</option>
+                  <option>Apr</option>
+                  <option>May</option>
+                  <option>Jun</option>
+                  <option>Jul</option>
+                  <option>Aug</option>
+                  <option>Sep</option>
+                  <option>Oct</option>
+                  <option>Nov</option>
+                  <option>Dec</option>
+                </select>
+                <select name="year">
+                  <option>Year</option>
+                  <option>2025</option>
+                  <option>2024</option>
+                  <option>2023</option>
+                  <option>2022</option>
+                  <option>2021</option>
+
+                </select>
+            </div>
+            <span class="error-message"></span>
+        </div>
+
+        <!-- Notes -->
+        <div class="form-group">
+            <label for="notes" class="label-left"><span class="label-text">Notes</span></label>
+            <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Add notes here..."></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="form-group button-row">
+            <div class="button-left">
+                <button type="button" class="button">Cancel</button>
+            </div>
+            <div class="button-right">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

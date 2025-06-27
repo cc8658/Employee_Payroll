@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href=../css/EmployeeDashboardCSS.css>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../jquery/dashboard.js"></script>
+<body>
+
+<!--Header-->
+<div class = "employeeHeader">
+  <a href="EmployeeDashboard.html" style="text-decoration: none; color: inherit;">
+    <header class ="headerline">
+      <div id="logo">
+        <img src="https://img.icons8.com/ios-filled/50/82A70C/employee-card.png" class="logo-icon" alt="logo"/>
+      </div>
+      <div class ="title-text">
+        <span style="color:greenyellow">EMPLOYEE</span><br>
+        <span class ="title-sub" style="color: #333333">PAYROLL</span>
+      </div>
+    </header>
+  </a>
+</div>
+<!--Main Content-->
+<main class="employeeMainBody">
+
+
+  <section aria-labelledby="employee-detail-title" class="detail" >
+    <h2 id = "employee-detail-title" >Employee Details</h2>
+
+    <div class="button-display">
+      <button type="button" class="search-button" aria-label="Search Employee">
+        <span class="material-icons search-icon" aria-hidden="true">search</span>
+      </button>
+
+      <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by name..."
+              class="search-input hidden"
+      />
+
+      <button id="addUser" type="button" aria-label="Add New Employee">
+      <span class="add-user">
+        <span id="plus" aria-hidden="true">+</span>
+        <span id="user">Add User</span>
+      </span>
+      </button>
+    </div>
+  </section>
+
+  <section class="employee-table-section" aria-labelledby="employee-table-title">
+
+    <div class="table-container">
+      <table class="employee-table">
+        <thead class ="employee-table-head">
+        <tr>
+          <th> </th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>Start Date</th>
+          <th id="action-cell">Actions</th>
+        </tr>
+        </thead>
+        <tbody id="employee-table-body">
+        <!-- JS will inject rows here -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+</main>
+
+</body>
+</html>

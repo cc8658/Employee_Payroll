@@ -1,0 +1,249 @@
+/*for Header*/
+.employeeHeader{
+  width: 1920px;
+  height: 106px;
+  color: #FFFFFF;
+}
+.headerline {
+  display: flex;               /* Turn it into a flex container */
+  align-items: center;         /* Vertically center the logo and text */
+  padding: 0px ;
+  background-color: #FFFFFF;
+}
+
+#logo img {
+  padding-left: 188px;
+  padding-top: 35.09px;
+  padding-bottom: 24.34px;
+  width: 50.24px;                 /* Adjust as needed */
+  height: 46.57px;
+}
+
+.title-text {
+  margin-left: 7.76px;               /* Space between logo and text */
+  padding-top: 32px;
+  padding-bottom: 22px;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.title-sub {
+  font-weight: bold;
+}
+.employeeHeader a {
+  cursor: pointer;
+}
+
+/*Body Design*/
+body{
+  margin :0px ;
+  padding : 0;
+  background-color: #F7F7F7;
+  /*background-color: #f7f7f7;*/
+  /*background: linear-gradient(to bottom right, #dce35b, #45b649);*/
+  font-family: 'Segoe UI', sans-serif;
+  width: 1920px;
+  height: 1080px;
+}
+/*Main Body*/
+.employeeMainBody{
+  margin-left: 188px;
+  margin-right: 183px;
+}
+
+/*Section Employee Detail Title*/
+ .detail{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
+}
+section.detail h2{
+  width: 217px;
+  height: 37px;
+  font: normal normal bold 28px/25px Roboto;
+  color: #42515F;
+  flex: 0 1 auto;
+
+}
+.button-display{
+  display:flex;
+  align-items:center;
+  gap:20px
+}
+
+.search-button {
+  background: #fff;
+  border: none;
+  box-shadow: 0px 1px 3px #00000029;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#addUser {
+  background: #82A70C;
+  border: none;
+  border-radius: 5px;
+  height: 55px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#plus, #user {
+  color: #fff;
+  font-size: 20px;
+}
+
+/*Table Design*/
+/* Table styling */
+.table-container{
+  /*background: #42515F 0% 0% no-repeat padding-box;*/
+  border-radius: 3px 3px 0px 0px;
+  /*padding: 20px;*/
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.employee-table {
+  width: 100%;
+  /*width: 1549px;*/
+  /*height: 67px;*/
+  border-collapse: collapse;
+
+  /*font: normal normal 500 18px/24px 'Roboto', sans-serif;*/
+  /*color: #FFFFFF;*/
+  /*text-transform: uppercase;*/
+  /*opacity: 1;*/
+}
+
+.employee-table-head{
+  /*width: 100%;*/
+  height: 67px;
+  background: #42515F 0% 0% no-repeat padding-box;
+  font: normal normal 500 18px / 24px 'Roboto', sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  /*color: #FFFFFF;*/
+  /*text-transform: uppercase;*/
+}
+.employee-table-head #action-cell{
+  text-align: center;
+
+}
+
+/* Profile Image Cell */
+.profile-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* TD (Body Cells) Styling */
+.employee-table td {
+  padding: 11px 12px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  vertical-align: middle;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Department Badge */
+.department-tag {
+  display: inline-block;
+  background-color: #e2f3d9;
+  color: #4a752c;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin: 2px 4px 2px 0;
+  font-weight: 500;
+}
+
+
+/* Last TD: Actions */
+.employee-table td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Action Buttons */
+.action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#action-button-cell{
+height: 50px;
+}
+
+.action-button img {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+
+.action-button:hover img {
+  filter: none;
+}
+
+.employee-table th,
+.employee-table td {
+  text-align: left;
+}
+
+
+/* Search Bar*/
+
+/* Hidden search input */
+#searchInput {
+  width: 0;
+  opacity: 0;
+  display: none;
+  margin-left: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+#searchInput.visible {
+  display: inline-block;
+}
+
+#searchInput.slide-in {
+  width: 200px;
+  opacity: 1;
+}
+
+
