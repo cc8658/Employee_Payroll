@@ -188,4 +188,14 @@ $(document).ready(function () {
         localStorage.removeItem("isEditing");
         localStorage.removeItem("editEmployee");
     };
+
+  $('button[type="reset"]').on('click', function () {
+    // Remove all error messages
+    $('.error-message').remove();
+
+    // Remove error styles
+    $('.input-error').removeClass('input-error');
+    $('input, select, textarea').removeClass('input-error');
+  });
+
 });
